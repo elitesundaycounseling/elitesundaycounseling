@@ -1280,7 +1280,7 @@
       </div>
     </div>
     <div class="contact-form reveal">
-      <form id="contactForm" onsubmit="handleSubmit(event)">
+      <form id="contactForm" action="https://formspree.io/f/xgolknan" method="POST">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Full name</label>
@@ -1316,8 +1316,9 @@
           <label class="form-label">What brings you here? (optional)</label>
           <textarea class="form-textarea" placeholder="Share as much or as little as you'd like..."></textarea>
         </div>
+        <input type="hidden" name="_subject" value="New Elite Sunday Counseling Request">
         <button type="submit" class="form-submit">Submit Request →</button>
-        <div class="success-msg" id="successMsg">✦ Your request has been received. Prabhleen will reach out within 24 hours.</div>
+
         <p class="form-privacy">🔒 All inquiries are protected by professional privilege and strict confidentiality.</p>
       </form>
     </div>
@@ -1354,15 +1355,33 @@
   }, { threshold: 0.1 });
   revealEls.forEach(el => observer.observe(el));
 
-  // Form submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    document.getElementById('successMsg').style.display = 'block';
-    e.target.querySelector('.form-submit').textContent = 'Request sent ✓';
-    e.target.querySelector('.form-submit').style.background = '#2a2a2a';
-    e.target.querySelector('.form-submit').style.color = 'var(--gold)';
-    e.target.querySelector('.form-submit').disabled = true;
+  // Nav shrink on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.padding = window.scrollY > 60 ? '12px 60px' : '20px 60px';
+  });
+
+  // Formspree async submit
+  var form = document.getElementById("contactForm");
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        document.getElementById("thank-you-message").style.display = "flex";
+        form.reset();
+      } else {
+        alert("Oops! There was a problem submitting your form. Please try emailing info@elitesundaycounseling.com directly.");
+      }
+    }).catch(() => {
+      alert("Network error. Please email info@elitesundaycounseling.com directly.");
+    });
   }
+  form.addEventListener("submit", handleSubmit);
 
   // Nav shrink on scroll
   window.addEventListener('scroll', () => {
@@ -1370,5 +1389,12 @@
     nav.style.padding = window.scrollY > 60 ? '12px 60px' : '20px 60px';
   });
 </script>
+<div id="thank-you-message" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(10,10,10,0.98); z-index:9999; justify-content:center; align-items:center; flex-direction:column; text-align:center; padding: 40px;">
+  <div style="font-family:'Playfair Display',Georgia,serif; color:var(--gold); font-size:14px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:24px; opacity:0.7;">Elite Sunday Counseling</div>
+  <h1 style="font-family:'Playfair Display',Georgia,serif; color:var(--gold); font-size:clamp(2rem,6vw,4rem); font-weight:400; margin-bottom:16px;">Thank You</h1>
+  <p style="color:var(--white-muted); font-family:'Playfair Display',Georgia,serif; font-size:16px; margin-bottom:36px; max-width:480px; line-height:1.8;">Your request has been received. Prabhleen will be in touch with you within 24 hours.</p>
+  <button onclick="location.reload()" style="padding:14px 40px; background:transparent; border:1px solid var(--gold); color:var(--gold); font-family:'Playfair Display',Georgia,serif; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.25s;" onmouseover="this.style.background='var(--gold)';this.style.color='#0a0a0a'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">Return to Site</button>
+</div>
+
 </body>
 </html>
