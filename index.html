@@ -1,279 +1,1374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Sunday Counseling </title>
-   <meta name="description" content="Tailored support for professionals & seniors: Mental Clarity • Life Transitions • On-Request Counseling, Webinars & EAP • Sundays 11AM–11PM IST">
-    
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Elite Sunday Counseling — Professional mental health support by Prabhleen Arora, Senior Psychologist. Counseling for professionals, seniors, and corporate teams. Available Sundays, globally.">
+<title>Elite Sunday Counseling | Prabhleen Arora — Senior Psychologist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --black-soft: #0f0f0f;
+    --black-card: #141414;
+    --black-border: #2c2c2c;
+    --gold: #D4A843;
+    --gold-light: #F2C558;
+    --gold-pale: #f7edcc;
+    --gold-dim: #A07E32;
+    --white: #ffffff;
+    --white-muted: #ede8de;
+    --white-dim: #b0a898;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Playfair Display', Georgia, serif;
+  }
 
-    <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-    scroll-behavior: smooth;
-}
-        :root {
-            --gold: #D4AF37;
-            --black: #0a0a0a;
-            --white: #f8f5f0;
-            --glass: rgba(255,255,255,0.08);
-        }
+  html { scroll-behavior: smooth; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Georgia', serif; 
-            background: var(--black); 
-            color: var(--white); 
-            line-height: 1.6;
-        }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10,10,10,0.95);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            border-bottom: 1px solid var(--gold);
-        }
+  /* NOISE TEXTURE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
 
-        nav h1 { color: var(--gold); font-size: 1.5rem; letter-spacing: 2px; }
-
-        /* Hero Section - UPDATED TO MATCH IMAGE LAYOUT */
-        header {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Main Heading */
- header h2 { 
-    font-size: clamp(1.8rem, 5vw, 3.2rem); /* This reduces the size for a more elegant look */
-    color: var(--gold); 
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-        /* Services Section (Prices Removed) */
-        .section { padding: 80px 10%; }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .card {
-            background: var(--glass);
-            padding: 35px;
-            border-radius: 15px;
-            border: 1px solid var(--gold);
-            transition: 0.3s;
-            text-align: center;
-        }
-
-        .card:hover { transform: translateY(-10px); background: rgba(212,175,55,0.1); }
-        .card h3 { color: var(--gold); margin-bottom: 15px; }
-
-        /* Form Styling */
-       .form-container {
-    max-width: 700px;
-    width: 95%; /* Ensures it doesn't touch the screen edges on mobile */
-    margin: 40px auto;
-    background: var(--glass);
-    padding: 30px 20px; /* Reduced padding for mobile comfort */
-    border-radius: 25px;
-    border: 1px solid var(--gold);
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
-}
-
-        .form-group { margin-bottom: 25px; text-align: left; }
-        
-        label { display: block; margin-bottom: 10px; color: var(--gold); font-weight: bold; font-size: 1.1rem; }
-
-input, select, textarea {
-    width: 100%;
-    padding: 15px; /* Slightly smaller padding for mobile */
-    background: #151515;
-    border: 1px solid #444;
-    color: white;
-    border-radius: 10px;
-    font-size: 1rem; /* Standard mobile-friendly font size */
-    font-family: inherit;
-    appearance: none; /* Helps some mobile browsers display the dropdown better */
-}
-
-/* Specifically for mobile browsers to prevent cutting off text in dropdowns */
-select {
-    white-space: pre-wrap; 
-    line-height: 1.4;
-}
-
-        input:focus, textarea:focus { border-color: var(--gold); outline: none; background: #1a1a1a; }
-
-  button {
-    width: 100%;
-    padding: 22px;
+  /* GOLD LINE ACCENT */
+  .gold-line {
+    display: inline-block;
+    width: 48px;
+    height: 1px;
     background: var(--gold);
-    color: black;
-    font-weight: bold;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+
+  /* NAVIGATION */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212,168,67,0.28);
+    transition: padding 0.3s;
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    
-    /* ADD THIS LINE BELOW */
-    font-family: inherit; 
-}
-        button:hover { background: #b8860b; transform: translateY(-2px); }
+    color: var(--white-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
 
-        footer {
-            background: #000;
-            padding: 40px 10%;
-            text-align: center;
-            border-top: 1px solid var(--gold);
-        }
+  .nav-links a:hover { color: var(--gold); }
 
-        .emergency { color: #ff4d4d; font-weight: bold; font-size: 1.2rem; margin-bottom: 10px; }
-    </style>
+  .nav-cta {
+    padding: 10px 24px;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--black);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-ornament {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgba(212,168,67,0.2);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero-bg-ornament::before {
+    content: '';
+    position: absolute;
+    inset: 40px;
+    border: 1px solid rgba(212,168,67,0.14);
+    border-radius: 50%;
+  }
+
+  .hero-bg-ornament::after {
+    content: '';
+    position: absolute;
+    inset: 100px;
+    border: 1px solid rgba(212,168,67,0.09);
+    border-radius: 50%;
+  }
+
+  .hero-content { max-width: 700px; position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.1s forwards;
+  }
+
+  .hero-h1 {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 5vw, 72px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.25s forwards;
+  }
+
+  .hero-h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 1.85;
+    max-width: 540px;
+    margin-bottom: 44px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.55s forwards;
+  }
+
+  .btn-gold {
+    padding: 14px 36px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.25s;
+  }
+
+  .btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    padding: 14px 36px;
+    background: transparent;
+    color: var(--white-muted);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 1px solid var(--black-border);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.25s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .hero-avail {
+    margin-top: 52px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.7s forwards;
+  }
+
+  .avail-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #4caf82;
+    box-shadow: 0 0 0 3px rgba(76,175,130,0.2);
+    animation: pulse 2s infinite;
+  }
+
+  .avail-text { font-size: 13px; color: var(--white-dim); }
+  .avail-text strong { color: var(--white-muted); font-weight: 400; }
+
+  /* TRUST BAR */
+  .trust-bar {
+    background: var(--black-card);
+    border-top: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .trust-item {
+    padding: 32px 24px;
+    text-align: center;
+    border-right: 1px solid var(--black-border);
+  }
+
+  .trust-item:last-child { border-right: none; }
+
+  .trust-num {
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+
+  .trust-label {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white-dim);
+  }
+
+  /* SECTION COMMONS */
+  section {
+    padding: 100px 60px;
+    position: relative;
+  }
+
+  .section-tag {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-h2 {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 3.5vw, 48px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    color: var(--white);
+  }
+
+  .section-h2 em { font-style: italic; font-weight: 400; color: var(--gold); }
+
+  .section-intro {
+    font-size: 15px;
+    color: var(--white-muted);
+    line-height: 1.85;
+    max-width: 540px;
+    margin-bottom: 60px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-decorative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .about-ornament-svg {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+  }
+
+  .about-ornament-svg .spin-group {
+    transform-origin: 240px 280px;
+    animation: slowSpin 60s linear infinite;
+  }
+
+  @keyframes slowSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .about-content { padding-top: 12px; }
+
+  .about-bio {
+    font-size: 15px;
+    color: var(--white-muted);
+    line-height: 1.95;
+    margin-bottom: 36px;
+  }
+
+  .about-bio p { margin-bottom: 16px; }
+
+  .cred-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .cred-item {
+    padding: 16px 18px;
+    border: 1px solid var(--black-border);
+    background: var(--black-card);
+  }
+
+  .cred-item-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 4px;
+  }
+
+  .cred-item-value {
+    font-size: 14px;
+    color: var(--white-muted);
+    font-weight: 400;
+  }
+
+  .lang-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .lang-pill {
+    padding: 6px 16px;
+    border: 1px solid rgba(212,168,67,0.5);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+  }
+
+  /* SERVICES */
+  .services-section {
+    background: var(--black-card);
+    border-top: 1px solid var(--black-border);
+    border-bottom: 1px solid var(--black-border);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--black-border);
+    margin-top: 0;
+  }
+
+  .svc-card {
+    background: var(--black-card);
+    padding: 44px 36px;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .svc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .svc-card:hover::before { transform: scaleX(1); }
+  .svc-card:hover { background: #1c1c1c; }
+
+  .svc-number {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 600;
+    color: rgba(212,168,67,0.22);
+    line-height: 1;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+  }
+
+  .svc-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .svc-desc {
+    font-size: 14px;
+    color: var(--white-muted);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .svc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .svc-tag {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(212,168,67,0.35);
+    padding: 4px 10px;
+  }
+
+  /* FORMAT & PRICING */
+  .format-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 0;
+  }
+
+  .format-card {
+    border: 1px solid var(--black-border);
+    padding: 32px 24px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+  }
+
+  .format-card:hover {
+    border-color: rgba(212,168,67,0.6);
+    transform: translateY(-4px);
+  }
+
+  .format-card.featured {
+    border-color: var(--gold);
+    background: rgba(212,168,67,0.06);
+  }
+
+  .format-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--black);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 12px;
+    white-space: nowrap;
+  }
+
+  .format-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .format-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .format-desc {
+    font-size: 13px;
+    color: var(--white-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .format-price {
+    font-family: var(--font-display);
+    font-size: 26px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .format-price-note {
+    font-size: 11px;
+    color: var(--white-dim);
+    margin-top: 4px;
+  }
+
+  /* EXPERTISE STRIP */
+  .expertise-section { background: var(--black-soft); }
+
+  .expertise-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+  }
+
+  .exp-col-title {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(212,168,67,0.35);
+  }
+
+  .exp-list { list-style: none; }
+
+  .exp-item {
+    font-size: 14px;
+    color: var(--white-muted);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .exp-item::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .testi-card {
+    border: 1px solid var(--black-border);
+    padding: 36px 32px;
+    background: var(--black-card);
+    position: relative;
+  }
+
+  .testi-quote {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 0.6;
+    color: var(--gold);
+    opacity: 0.6;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .testi-text {
+    font-size: 16px;
+    color: var(--white-muted);
+    line-height: 1.85;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  .testi-author {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .testi-role {
+    font-size: 12px;
+    color: var(--white-dim);
+    margin-top: 2px;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--black-card);
+    border-top: 1px solid var(--black-border);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-info { }
+
+  .contact-detail {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--black-border);
+    align-items: flex-start;
+  }
+
+  .contact-detail:first-of-type { border-top: 1px solid var(--black-border); }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(212,168,67,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .contact-detail-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 3px;
+  }
+
+  .contact-detail-value {
+    font-size: 14px;
+    color: var(--white-muted);
+  }
+
+  .contact-detail-value a {
+    color: var(--white-muted);
+    text-decoration: none;
+  }
+
+  .contact-detail-value a:hover { color: var(--gold); }
+
+  /* FORM */
+  .contact-form { }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white-dim);
+    margin-bottom: 8px;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    background: var(--black);
+    border: 1px solid var(--black-border);
+    color: var(--white-muted);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 300;
+    padding: 13px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: rgba(212,168,67,0.7);
+  }
+
+  .form-textarea { resize: vertical; min-height: 120px; }
+
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23D4A843' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+  }
+
+  .form-select option { background: var(--black-soft); }
+
+  .form-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s;
+  }
+
+  .form-submit:hover { background: var(--gold-light); }
+
+  .form-privacy {
+    font-size: 12px;
+    color: var(--white-dim);
+    margin-top: 12px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(212,168,67,0.2);
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white-muted);
+    letter-spacing: -0.01em;
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 12px;
+    color: var(--white-dim);
+  }
+
+  .emergency-bar {
+    background: rgba(212,168,67,0.07);
+    border: 1px solid rgba(212,168,67,0.3);
+    padding: 14px 60px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--white-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .emergency-bar strong { color: var(--gold); font-weight: 500; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(76,175,130,0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(76,175,130,0.1); }
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* DIVIDER */
+  .gold-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 0 48px;
+  }
+
+  /* MOBILE */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 72px 24px; }
+    .hero { padding: 100px 24px 72px; }
+    .about-grid,
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .services-grid,
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .format-grid { grid-template-columns: 1fr 1fr; }
+    .trust-bar { grid-template-columns: 1fr 1fr; padding: 0 24px; }
+    .trust-item { border-right: none; border-bottom: 1px solid var(--black-border); }
+    .expertise-cols { grid-template-columns: 1fr; gap: 32px; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; padding: 32px 24px; }
+    .emergency-bar { padding: 14px 24px; }
+  }
+
+  /* SUCCESS MESSAGE */
+  .success-msg {
+    display: none;
+    padding: 20px;
+    border: 1px solid rgba(201,168,76,0.4);
+    background: rgba(201,168,76,0.05);
+    text-align: center;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    margin-top: 16px;
+  }
+</style>
 </head>
 <body>
 
-    <nav>
-        <h1>Elite Sunday Counseling</h1>
-        <div id="google_translate_element"></div>
-    </nav>
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><span>Elite Sunday</span> Counseling</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#formats">Sessions</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Discovery — ₹499</a>
+</nav>
 
-   <header>
-    <h2>Counseling for the Chosen Ones</h2>
-    <p>Tailored support for professionals & seniors: Mental Clarity • Life Transitions • On-Request Counseling, Webinars & EAP • Sundays 11AM–11PM IST</p>
-</header>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-ornament"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="gold-line"></span>
+      Senior Psychologist · M.A. Clinical Psychology · Ph.D. Scholar
+    </div>
+    <h1 class="hero-h1">
+      Clarity.<br><em>Resilience.</em><br>Growth.
+    </h1>
+    <p class="hero-sub">
+      Professional counseling for high-achieving individuals, seniors, and corporate teams — delivered with clinical precision and genuine care. Available every Sunday, worldwide.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-gold">Book a Discovery Session — ₹499</a>
+      <a href="#services" class="btn-outline">Explore services</a>
+    </div>
+    <div class="hero-avail">
+      <div class="avail-dot"></div>
+      <span class="avail-text">Available <strong>Sundays 11AM – 11PM IST</strong> · Video · Audio · Chat · Global time zones</span>
+    </div>
+  </div>
+</section>
 
-    <section class="section" id="services">
-        <h2 style="text-align: center; color: var(--gold); font-size: 2.5rem;">Our Services</h2>
-        <div class="grid">
-            <div class="card">
-            <h3>Adult & Career Wellness</h3>
-            <p>Managing anxiety, career stress, and <strong>healthy relationships</strong> for high-achievers.</p>
-            </div>
-            <div class="card">
-            <h3>Senior & Later Life Support</h3>
-            <p>Navigating life transitions, <strong>family dynamics</strong>, and wellness for the 60+ community.</p>
-            </div>
-            <div class="card">
-            <h3>Custom Webinar & EAP Support</h3>
-            <p>Request tailored sessions and private employee wellness programs on demand.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="contact">
-        <div class="form-container">
-            <h2 style="text-align: center; color: var(--gold); margin-bottom: 35px; font-size: 2rem;">Confidential Consultation Request</h2>
-            
-           <form id="my-form" action="https://formspree.io/f/xgolknan" method="POST">
-                
-                <div class="form-group">
-                    <label for="full-name">Client Name</label>
-                    <input type="text" id="full-name" name="Client Name" required placeholder="Enter name">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Contact Email</label>
-                    <input type="email" id="email" name="Email" required placeholder="Enter email address">
-                </div>
-
-                <div class="form-group">
-                    <label for="age">Client Category</label>
-                    <select id="age" name="Category">
-                        <option value="Adult (18-59)">Adult (18-59)</option>
-                        <option value="Geriatric/Senior (60+)">Geriatric/Senior (60+)</option>
-                    </select>
-                </div>
-
-<div class="form-group">
-    <label for="service">Requested Format & Fee</label>
-    <select id="service" name="Session Type" required>
-        <option value="" disabled selected>Select a session format</option>
-        
-        <option value="Premium Video Consultation">Premium Video Consultation</option>
-        <option value="Audio Consultation">Audio Consultation</option>
-        <option value="Elite Chat Support">Elite Chat Support</option>
-        <option value="Employee Assistance Program (EAP) Support">Employee Assistance Program (EAP) Support</option>
-        <option value="Training/ Webinar Facilitation Support">Training/ Webinar Facilitation Support</option>
-    </select>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item reveal">
+    <div class="trust-num">3,000+</div>
+    <div class="trust-label">Sessions delivered</div>
+  </div>
+  <div class="trust-item reveal">
+    <div class="trust-num">2,500+</div>
+    <div class="trust-label">Lives touched</div>
+  </div>
+  <div class="trust-item reveal">
+    <div class="trust-num">40+</div>
+    <div class="trust-label">Workshops facilitated</div>
+  </div>
+  <div class="trust-item reveal">
+    <div class="trust-num">5+</div>
+    <div class="trust-label">Years of practice</div>
+  </div>
 </div>
 
-                <div class="form-group">
-                    <label for="message">Concerns or Inquiries</label>
-                    <textarea id="message" name="Message" rows="5" required placeholder="Briefly describe how we can assist you..."></textarea>
-                </div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-tag"><span class="gold-line"></span> About</div>
+  <div class="about-grid">
+        <div class="about-decorative">
+      <svg viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg" class="about-ornament-svg">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#D4A843" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#D4A843" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F2C558" stop-opacity="0.9"/>
+            <stop offset="50%" stop-color="#D4A843" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#A07E32" stop-opacity="0.7"/>
+          </linearGradient>
+        </defs>
 
-                <input type="hidden" name="_subject" value="New Elite Sunday Consultation Request">
+        <!-- Background glow -->
+        <g class="spin-group">
+        <ellipse cx="240" cy="280" rx="200" ry="200" fill="url(#glow)"/>
 
-                <button type="submit">Submit Request</button>
-                
-                <p style="font-size: 0.85rem; margin-top: 20px; text-align: center; color: #777;">
-                    All inquiries are protected by professional privilege and confidentiality.
-                </p>
-            </form>
+        <!-- Outer ring -->
+        <circle cx="240" cy="280" r="190" fill="none" stroke="#D4A843" stroke-width="0.6" stroke-opacity="0.3"/>
+        <circle cx="240" cy="280" r="175" fill="none" stroke="#D4A843" stroke-width="0.4" stroke-opacity="0.2"/>
+
+        <!-- Rotating petal ring - 12 petals -->
+        <g transform="translate(240,280)">
+          <g transform="rotate(0)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(30)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(60)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(90)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(120)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(150)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(180)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(210)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(240)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(270)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(300)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+          <g transform="rotate(330)"><ellipse cx="0" cy="-140" rx="12" ry="36" fill="none" stroke="url(#goldLine)" stroke-width="0.8" opacity="0.7"/></g>
+        </g>
+
+        <!-- Mid ring diamonds -->
+        <g transform="translate(240,280)">
+          <g transform="rotate(15)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(45)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(75)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(105)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(135)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(165)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(195)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(225)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(255)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(285)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(315)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+          <g transform="rotate(345)"><rect x="-5" y="-108" width="10" height="10" fill="#D4A843" opacity="0.5" transform="rotate(45 0 -103)"/></g>
+        </g>
+
+        <!-- Inner decorative star/cross -->
+        <g transform="translate(240,280)">
+          <line x1="0" y1="-70" x2="0" y2="70" stroke="#D4A843" stroke-width="0.8" opacity="0.5"/>
+          <line x1="-70" y1="0" x2="70" y2="0" stroke="#D4A843" stroke-width="0.8" opacity="0.5"/>
+          <line x1="-49" y1="-49" x2="49" y2="49" stroke="#D4A843" stroke-width="0.5" opacity="0.35"/>
+          <line x1="49" y1="-49" x2="-49" y2="49" stroke="#D4A843" stroke-width="0.5" opacity="0.35"/>
+          <circle cx="0" cy="0" r="55" fill="none" stroke="#D4A843" stroke-width="0.7" opacity="0.4"/>
+          <circle cx="0" cy="0" r="38" fill="none" stroke="#D4A843" stroke-width="0.5" opacity="0.3"/>
+          <circle cx="0" cy="0" r="18" fill="#D4A843" opacity="0.12"/>
+          <circle cx="0" cy="0" r="6" fill="#D4A843" opacity="0.6"/>
+          <!-- Cardinal dots -->
+          <circle cx="0" cy="-55" r="3" fill="#D4A843" opacity="0.7"/>
+          <circle cx="55" cy="0" r="3" fill="#D4A843" opacity="0.7"/>
+          <circle cx="0" cy="55" r="3" fill="#D4A843" opacity="0.7"/>
+          <circle cx="-55" cy="0" r="3" fill="#D4A843" opacity="0.7"/>
+        </g>
+        </g><!-- end spin-group -->
+
+        <!-- Name text at bottom -->
+        <text x="240" y="510" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="15" font-weight="500" fill="#D4A843" letter-spacing="3" opacity="0.9">PRABHLEEN ARORA</text>
+        <text x="240" y="532" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="10" font-weight="400" fill="#A07E32" letter-spacing="4" opacity="0.8">SENIOR PSYCHOLOGIST</text>
+
+        <!-- Bottom decorative line -->
+        <line x1="140" y1="520" x2="190" y2="520" stroke="#D4A843" stroke-width="0.6" opacity="0.4"/>
+        <line x1="290" y1="520" x2="340" y2="520" stroke="#D4A843" stroke-width="0.6" opacity="0.4"/>
+        <circle cx="240" cy="520" r="2" fill="#D4A843" opacity="0.5"/>
+      </svg>
+    </div>
+    </div>
+    <div class="about-content reveal">
+      <h2 class="section-h2">Meet <em>Prabhleen</em><br>Arora</h2>
+      <div class="gold-divider"></div>
+      <div class="about-bio">
+        <p>I'm Prabhleen Arora — a Senior Psychologist with over 5 years of experience spanning clinical practice, psychometric assessment, and institutional mental health operations. I hold a Master's in Clinical Psychology from Lovely Professional University, where I graduated as University Topper and Gold Medallist, and I am currently pursuing my Ph.D. in Psychology.</p>
+        <p>My work spans the full spectrum of human experience: from executive burnout and career transitions to senior wellness, LGBTQIA+ affirmative therapy, crisis intervention, and corporate EAP programs. I have delivered 3,000+ counseling sessions and designed mental health frameworks that have reached thousands of individuals across universities, organizations, and remote populations.</p>
+        <p>I believe great therapy is both art and science — rooted in evidence, powered by empathy, and built around <em>you</em>. Whether you're a driven professional seeking clarity, a senior navigating life's transitions, or an organization investing in your people — I am here, every Sunday.</p>
+      </div>
+      <div class="cred-grid">
+        <div class="cred-item">
+          <div class="cred-item-label">Qualification</div>
+          <div class="cred-item-value">M.A. Clinical Psychology</div>
         </div>
-    </section>
+        <div class="cred-item">
+          <div class="cred-item-label">Academic honor</div>
+          <div class="cred-item-value">University Topper · Gold Medallist</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-item-label">Currently pursuing</div>
+          <div class="cred-item-value">Ph.D. in Psychology</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-item-label">Specializations</div>
+          <div class="cred-item-value">Clinical · EAP · Psychometric AI QA</div>
+        </div>
+      </div>
+      <div class="lang-row">
+        <span class="lang-pill">English</span>
+        <span class="lang-pill">Hindi</span>
+        <span class="lang-pill">Punjabi</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p class="emergency">EMERGENCY HELPLINE: 9152987821 (Available 24/7)</p>
-        <p>© 2026 Elite Sunday Counseling. Professional Confidentiality Guaranteed.</p>
-    </footer>
+<!-- SERVICES -->
+<section id="services" class="services-section" style="padding-left:60px; padding-right:60px;">
+  <div style="margin-bottom: 56px;">
+    <div class="section-tag"><span class="gold-line"></span> Services</div>
+    <h2 class="section-h2">How I can <em>help you</em></h2>
+    <p class="section-intro">Three core pillars of practice, each delivered with clinical expertise and a deeply personal approach.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card reveal">
+      <div class="svc-number">01</div>
+      <div class="svc-title">Professional & Career Wellness</div>
+      <p class="svc-desc">For high-achievers navigating burnout, career transitions, workplace anxiety, and the pressure of peak performance. Tailored for working adults aged 18–59 across industries.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Burnout recovery</span>
+        <span class="svc-tag">Anxiety</span>
+        <span class="svc-tag">Career stress</span>
+        <span class="svc-tag">Relationships</span>
+      </div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-number">02</div>
+      <div class="svc-title">Senior & Later-Life Support</div>
+      <p class="svc-desc">Compassionate, specialist support for the 60+ community. Covering life transitions, grief, family dynamics, isolation, and wellness — including support for families of seniors living abroad.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Life transitions</span>
+        <span class="svc-tag">Grief</span>
+        <span class="svc-tag">Family dynamics</span>
+        <span class="svc-tag">NRI families</span>
+      </div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-number">03</div>
+      <div class="svc-title">Corporate EAP & Webinars</div>
+      <p class="svc-desc">Custom Employee Assistance Programs, organizational KPI design, leadership resilience workshops, and mental health webinars for teams of all sizes — on-demand and scheduled.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">EAP programs</span>
+        <span class="svc-tag">Webinars</span>
+        <span class="svc-tag">Leadership</span>
+        <span class="svc-tag">Team wellness</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-var form = document.getElementById("my-form");
-  
-  async function handleSubmit(event) {
-    event.preventDefault(); // Stop the page from leaving
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        // Show our thank you message!
-        document.getElementById("thank-you-message").style.display = "flex";
-        form.reset();
-      } else {
-        alert("Oops! There was a problem submitting your form");
+<!-- FORMATS & PRICING -->
+<section id="formats">
+  <div class="section-tag"><span class="gold-line"></span> Session Formats</div>
+  <h2 class="section-h2">Choose your <em>format</em></h2>
+  <p class="section-intro">Every format is delivered personally by Prabhleen — confidential, professional, and scheduled to fit your Sunday.</p>
+  <div class="format-grid">
+    <div class="format-card reveal">
+      <span class="format-icon">🔍</span>
+      <div class="format-name">Discovery Session</div>
+      <p class="format-desc">A focused 30-min conversation to understand your needs, set goals, and see if we're the right fit — before any commitment.</p>
+      <div class="format-price">₹499</div>
+      <div class="format-price-note">30-min session · One-time</div>
+    </div>
+    <div class="format-card featured reveal">
+      <div class="format-badge">Most popular</div>
+      <span class="format-icon">🎥</span>
+      <div class="format-name">Premium Video</div>
+      <p class="format-desc">Face-to-face online session via secure video. The gold standard for depth, connection, and lasting progress.</p>
+      <div class="format-price">On request</div>
+      <div class="format-price-note">50-min session · Sundays</div>
+    </div>
+    <div class="format-card reveal">
+      <span class="format-icon">🎧</span>
+      <div class="format-name">Audio Consultation</div>
+      <p class="format-desc">Voice-only sessions for those who prefer privacy and comfort without video. Full clinical depth, no camera required.</p>
+      <div class="format-price">On request</div>
+      <div class="format-price-note">50-min session · Sundays</div>
+    </div>
+    <div class="format-card reveal">
+      <span class="format-icon">💬</span>
+      <div class="format-name">Elite Chat Support</div>
+      <p class="format-desc">Live text-based counseling for those who express themselves better in writing. Private, flexible, and fully confidential.</p>
+      <div class="format-price">On request</div>
+      <div class="format-price-note">60-min window · Sundays</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise" class="expertise-section">
+  <div class="section-tag"><span class="gold-line"></span> Expertise</div>
+  <h2 class="section-h2">Clinical <em>specializations</em></h2>
+  <p class="section-intro">A broad, evidence-based practice built across years of frontline clinical work, research, and institutional experience.</p>
+  <div class="expertise-cols reveal" style="grid-template-columns: 1fr 1fr;">
+    <div>
+      <div class="exp-col-title">Clinical skills</div>
+      <ul class="exp-list">
+        <li class="exp-item">Crisis intervention</li>
+        <li class="exp-item">Individual counseling</li>
+        <li class="exp-item">Group counseling</li>
+        <li class="exp-item">LGBTQIA+ affirmative therapy</li>
+        <li class="exp-item">Teleconsultation</li>
+        <li class="exp-item">Couples counseling</li>
+      </ul>
+    </div>
+    <div>
+      <div class="exp-col-title">Populations served</div>
+      <ul class="exp-list">
+        <li class="exp-item">Working professionals (18–59)</li>
+        <li class="exp-item">Seniors (60+)</li>
+        <li class="exp-item">Adolescents</li>
+        <li class="exp-item">LGBTQ+ individuals</li>
+        <li class="exp-item">Couples</li>
+        <li class="exp-item">Corporate leadership teams</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-tag"><span class="gold-line"></span> Client voices</div>
+  <h2 class="section-h2">What clients <em>say</em></h2>
+  <p class="section-intro">All testimonials are anonymized to protect confidentiality.</p>
+  <div class="testimonials-grid">
+    <div class="testi-card reveal">
+      <span class="testi-quote">"</span>
+      <p class="testi-text">Prabhleen helped me recognize patterns I'd carried for years without ever seeing them. After just a few Sunday sessions, I had more clarity than a decade of trying to figure things out alone.</p>
+      <div class="testi-author">R.M.</div>
+      <div class="testi-role">Senior Marketing Manager, Delhi</div>
+    </div>
+    <div class="testi-card reveal">
+      <span class="testi-quote">"</span>
+      <p class="testi-text">I was skeptical about online counseling for my mother, but Prabhleen's warmth and expertise were immediately evident. It has made a real difference in her wellbeing and our family's peace of mind.</p>
+      <div class="testi-author">A.S.</div>
+      <div class="testi-role">NRI Client, London — supporting parent in India</div>
+    </div>
+    <div class="testi-card reveal">
+      <span class="testi-quote">"</span>
+      <p class="testi-text">We brought Prabhleen in for our company's EAP program. Her workshops were sophisticated, practical, and deeply appreciated by our team. The feedback was overwhelmingly positive.</p>
+      <div class="testi-author">D.K.</div>
+      <div class="testi-role">HR Director, Tech Company, Gurugram</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-tag"><span class="gold-line"></span> Connect</div>
+  <h2 class="section-h2">Begin your <em>journey</em></h2>
+  <p class="section-intro">Start with a 30-minute Discovery Session at ₹499 — a focused, professional conversation to understand your needs and map the path forward. No commitment beyond that.</p>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="contact-detail">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-value"><a href="mailto:info@elitesundaycounseling.com">info@elitesundaycounseling.com</a></div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <div class="contact-detail-label">Availability</div>
+          <div class="contact-detail-value">Sundays 11AM – 11PM IST<br>All global time zones welcome</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">🔗</div>
+        <div>
+          <div class="contact-detail-label">LinkedIn</div>
+          <div class="contact-detail-value"><a href="https://www.linkedin.com/in/prabhleen-arora/" target="_blank">linkedin.com/in/prabhleen-arora</a></div>
+        </div>
+      </div>
+      <div style="margin-top: 32px; padding: 24px; border: 1px solid rgba(212,168,67,0.4); background: rgba(212,168,67,0.06);">
+        <div style="font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:10px;">Why Sundays?</div>
+        <p style="font-size:14px; color:var(--white-muted); line-height:1.8;">We meet on Sundays — because that's when busy professionals and families finally have time for themselves. No rushing between meetings. No Monday-morning dread. Just space to breathe, reflect, and grow.</p>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Full name</label>
+            <input type="text" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-input" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">I am seeking support as</label>
+          <select class="form-select">
+            <option value="">Select category</option>
+            <option>A professional / adult (18–59)</option>
+            <option>A senior individual (60+)</option>
+            <option>An NRI / family member abroad</option>
+            <option>A corporate / HR representative</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Preferred session format</label>
+          <select class="form-select">
+            <option value="">Select format</option>
+            <option>Discovery Session (30 min · ₹499)</option>
+            <option>Premium video consultation</option>
+            <option>Audio consultation</option>
+            <option>Elite chat support</option>
+            <option>Corporate EAP / webinar</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">What brings you here? (optional)</label>
+          <textarea class="form-textarea" placeholder="Share as much or as little as you'd like..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Submit Request →</button>
+        <div class="success-msg" id="successMsg">✦ Your request has been received. Prabhleen will reach out within 24 hours.</div>
+        <p class="form-privacy">🔒 All inquiries are protected by professional privilege and strict confidentiality.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY BAR -->
+<div class="emergency-bar">
+  <strong>Mental health emergency?</strong> &nbsp;Helpline available 24/7: &nbsp;<strong>iCall: 9152987821</strong> &nbsp;·&nbsp; <strong>Vandrevala Foundation: 1860-2662-345</strong>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><span>Elite Sunday</span> Counseling</div>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://www.linkedin.com/in/prabhleen-arora/" target="_blank">LinkedIn</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Elite Sunday Counseling. Professional Confidentiality Guaranteed.</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
       }
     });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('successMsg').style.display = 'block';
+    e.target.querySelector('.form-submit').textContent = 'Request sent ✓';
+    e.target.querySelector('.form-submit').style.background = '#2a2a2a';
+    e.target.querySelector('.form-submit').style.color = 'var(--gold)';
+    e.target.querySelector('.form-submit').disabled = true;
   }
-  form.addEventListener("submit", handleSubmit)
-    </script>
-<div id="thank-you-message" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(10,10,10,0.98); z-index:9999; justify-content:center; align-items:center; flex-direction:column; text-align:center;">
-    <h1 style="color:var(--gold); font-size:3rem;">THANK YOU</h1>
-    <p style="color:white; font-size:1.2rem; margin-bottom:20px;">Your request has been received. We will contact you shortly.</p>
-    <button onclick="location.reload()" style="width:auto; padding:10px 30px;">Return to Site</button>
-</div>
+
+  // Nav shrink on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.padding = window.scrollY > 60 ? '12px 60px' : '20px 60px';
+  });
+</script>
 </body>
 </html>
