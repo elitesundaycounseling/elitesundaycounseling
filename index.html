@@ -1284,16 +1284,16 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Full name</label>
-            <input type="text" class="form-input" placeholder="Your name" required>
+            <input type="text" name="Client Name" class="form-input" placeholder="Your name" required>
           </div>
           <div class="form-group">
             <label class="form-label">Email address</label>
-            <input type="email" class="form-input" placeholder="your@email.com" required>
+            <input type="email" name="Email" class="form-input" placeholder="your@email.com" required>
           </div>
         </div>
         <div class="form-group">
           <label class="form-label">I am seeking support as</label>
-          <select class="form-select">
+          <select name="Category" class="form-select">
             <option value="">Select category</option>
             <option>A professional / adult (18–59)</option>
             <option>A senior individual (60+)</option>
@@ -1303,7 +1303,7 @@
         </div>
         <div class="form-group">
           <label class="form-label">Preferred session format</label>
-          <select class="form-select">
+          <select name="Session Type" class="form-select" required>
             <option value="">Select format</option>
             <option>Discovery Session (30 min · ₹499)</option>
             <option>Premium video consultation</option>
@@ -1314,7 +1314,7 @@
         </div>
         <div class="form-group">
           <label class="form-label">What brings you here? (optional)</label>
-          <textarea class="form-textarea" placeholder="Share as much or as little as you'd like..."></textarea>
+          <textarea name="Message" class="form-textarea" placeholder="Share as much or as little as you'd like..."></textarea>
         </div>
         <input type="hidden" name="_subject" value="New Elite Sunday Counseling Request">
         <button type="submit" class="form-submit">Submit Request →</button>
