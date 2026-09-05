@@ -1,16 +1,14 @@
-## Hi there 👋
+# Elite Sunday Counseling
 
-<!--
-**elitesundaycounseling/elitesundaycounseling** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Source code for [elitesundaycounseling.com](https://elitesundaycounseling.com/) — the website for Elite Sunday Counseling, an online therapy practice led by Prabhleen Arora (M.A. Clinical Psychology, Ph.D. Candidate), specializing in queer-affirmative therapy, AI-affirmative therapy, and relationship counseling. Sessions run every Sunday, worldwide.
 
-Here are some ideas to get you started:
+🔗 **Live site:** https://elitesundaycounseling.com/
+📧 **Contact:** info@elitesundaycounseling.com
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## About this repo
+
+Static site (HTML/CSS/vanilla JS) deployed via GitHub Pages, with a custom domain configured through `CNAME`.
+
+- `index.html` — the site itself
+- `robots.txt` / `sitemap.xml` — search engine crawling config
+- `llms.txt` — a structured summary of the site for AI/LLM crawlers
