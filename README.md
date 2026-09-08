@@ -1,14 +1,12 @@
-# Elite Sunday Counseling
-
-Source code for [elitesundaycounseling.com](https://elitesundaycounseling.com/) — the website for Elite Sunday Counseling, an online therapy practice led by Prabhleen Arora (M.A. Clinical Psychology, Ph.D. Candidate), specializing in queer-affirmative therapy, AI-affirmative therapy, and relationship counseling. Sessions run every Sunday, worldwide.
-
-🔗 **Live site:** https://elitesundaycounseling.com/
-📧 **Contact:** info@elitesundaycounseling.com
-
-## About this repo
-
-Static site (HTML/CSS/vanilla JS) deployed via GitHub Pages, with a custom domain configured through `CNAME`.
-
-- `index.html` — the site itself
-- `robots.txt` / `sitemap.xml` — search engine crawling config
-- `llms.txt` — a structured summary of the site for AI/LLM crawlers
+Elite Sunday Counseling
+Source for elitesundaycounseling.com, the website for Elite Sunday Counseling, an online counseling practice led by Prabhleen Arora (M.A. Clinical Psychology, Ph.D. Candidate).
+The practice specializes in queer-affirmative therapy, AI-affirmative therapy, couple counseling, senior wellness counseling, and cleft-affirmative therapy, with sessions held every Sunday.
+About this repository
+This repo hosts a single static page (`index.html`) deployed via GitHub Pages, along with supporting files:
+`robots.txt` and `sitemap.xml` for search engine crawlers
+`llms.txt`, a structured summary of the practice for AI tools and answer engines
+`favicon.svg` and `og-image.png` for the browser tab icon and social link previews
+Contact
+Website: https://elitesundaycounseling.com/
+Email: info@elitesundaycounseling.com
+LinkedIn: https://www.linkedin.com/in/prabhleen-arora/
